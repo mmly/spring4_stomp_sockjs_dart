@@ -65,8 +65,9 @@ main() {
     print("success sockjs connection");        
 
     //sending STOMP message
-    print(JSON.encode({ "name": "hi dart" }));
-    client.sendString('/app/hello', JSON.encode({ "name": "hi dart" }));    
+    var message={ "name": "hi dart" };
+    print(JSON.encode(message));
+    client.sendJson('/app/hello', message);    
     //client.sendJson('/app/hello', JSON.encode({ "name": "hi dart" }));
     
     //subscribe STOMP messages

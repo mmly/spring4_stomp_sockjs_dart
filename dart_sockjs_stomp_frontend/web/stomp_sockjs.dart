@@ -1,4 +1,4 @@
-library stomp_websocket;
+library stomp_sockjs;
 
 import "dart:async";
 
